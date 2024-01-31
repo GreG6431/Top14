@@ -6,12 +6,9 @@ import "./Team.css";
 
 function Team() {
   const allTeams = useLoaderData();
-  const top14LogoUrl =
-    "https://upload.wikimedia.org/wikipedia/fr/thumb/3/3a/Top_14.svg/632px-Top_14.svg.png?20160521213028";
 
   return (
     <div className="team-container">
-      <img className="top14-logo" src={top14LogoUrl} alt="TOP14 Logo" />
       <h1>LES ÉQUIPES</h1>
 
       <div className="teams-list">
