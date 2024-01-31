@@ -20,7 +20,6 @@ function AdminArticles() {
   };
   return (
     <div>
-      {console.log(articles)}
       <h1>Administration d'un joueur</h1>
       <form>
         Ajout d'un joueur
@@ -29,7 +28,7 @@ function AdminArticles() {
           <input
             type="text"
             name="lastname"
-            require
+            required
             value={articles.lastname}
             onChange={handleArticles}
           />
@@ -39,7 +38,7 @@ function AdminArticles() {
           <input
             type="text"
             name="firstname"
-            require
+            required
             value={articles.firstname}
             onChange={handleArticles}
           />
@@ -49,7 +48,7 @@ function AdminArticles() {
           <input
             type="text"
             name="birthday"
-            require
+            required
             value={articles.birthday}
             onChange={handleArticles}
           />
@@ -59,7 +58,7 @@ function AdminArticles() {
           <input
             type="text"
             name="country"
-            require
+            required
             value={articles.country}
             onChange={handleArticles}
           />
@@ -69,7 +68,7 @@ function AdminArticles() {
           <input
             type="text"
             name="city"
-            require
+            required
             value={articles.city}
             onChange={handleArticles}
           />
@@ -79,7 +78,7 @@ function AdminArticles() {
           <input
             type="text"
             name="job"
-            require
+            required
             value={articles.job}
             onChange={handleArticles}
           />

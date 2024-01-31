@@ -3,6 +3,11 @@
   margin: 20px;
 }
 
+.top14-logo {
+  max-width: 100px;
+  margin-right: 10px;
+}
+
 .teams-list {
   display: flex;
   flex-wrap: wrap;
@@ -10,11 +15,12 @@
 }
 
 .team-card {
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 8px;
   margin: 10px;
   padding: 10px;
   max-width: 300px;
+  height: 300px;
 }
 
 .logo {

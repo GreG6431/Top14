@@ -6,9 +6,12 @@ import "./Team.css";
 
 function Team() {
   const allTeams = useLoaderData();
+  const top14LogoUrl =
+    "https://upload.wikimedia.org/wikipedia/fr/thumb/3/3a/Top_14.svg/632px-Top_14.svg.png?20160521213028";
 
   return (
     <div className="team-container">
+      <img className="top14-logo" src={top14LogoUrl} alt="TOP14 Logo" />
       <h1>CHAMPIONNAT TOP 14</h1>
       <h2>LES ÉQUIPES</h2>
       <div className="teams-list">
@@ -31,7 +34,14 @@ function Team() {
 }
 
 Team.propTypes = {
-  team: PropTypes.shape().isRequired,
+  team: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    logo: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+    stadium: PropTypes.string.isRequired,
+    since: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default Team;
