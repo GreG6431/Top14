@@ -1,0 +1,11 @@
+.footer {
+  height: 50px;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  margin-top: 150px;
+}
+
+.footer p {
+  font-weight: bold;
+  padding-top: 15px;
+}
