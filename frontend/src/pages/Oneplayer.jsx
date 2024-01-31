@@ -12,7 +12,6 @@ function Oneplayer() {
       <h1>Pays: {Team.country}</h1>
       <h1>Ville: {Team.city}</h1>
       <h1>Poste: {Team.job}</h1>
-      <img className="logo" src={Team.logo} alt="logo" />
     </div>
   );
 }

@@ -5,6 +5,7 @@ function Players() {
   return (
     <div>
       <players />
+      <Team />
     </div>
   );
 }
