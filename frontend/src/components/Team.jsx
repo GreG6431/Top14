@@ -12,11 +12,11 @@ function Team() {
   return (
     <div className="team-container">
       <img className="top14-logo" src={top14LogoUrl} alt="TOP14 Logo" />
-      <h1>CHAMPIONNAT TOP 14</h1>
-      <h2>LES ÉQUIPES</h2>
+      <h1>LES ÉQUIPES</h1>
+
       <div className="teams-list">
         {allTeams.map((team) => (
-          <Link to={`/team/${team.id}`} key={team.id}>
+          <Link to={`/team/${team.id}`} key={team.id} className="custom-link">
             <div className="team-card">
               <img className="logo" src={team.logo} alt="logo" />
               <div className="team-info">

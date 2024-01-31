@@ -37,3 +37,7 @@ h2,
 p {
   margin: 0;
 }
+.custom-link {
+  color: black;
+  text-decoration: none;
+}
