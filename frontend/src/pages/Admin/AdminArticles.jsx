@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./AdminArticles.css";
 
 const articlesType = {
@@ -8,24 +9,54 @@ const articlesType = {
   country: "",
   city: "",
   job: "",
+  team_id: 1,
 };
 
 function AdminArticles() {
   const [articles, setArticles] = useState(articlesType);
   const handleArticles = (event) => {
-    setArticles((previousState) => ({
-      ...previousState,
-      [event.target.name]: event.target.value,
-    }));
+    if (event.target.name === "team_id") {
+      setArticles((previousState) => ({
+        ...previousState,
+        [event.target.name]: +event.target.value,
+      }));
+    } else {
+      setArticles((previousState) => ({
+        ...previousState,
+        [event.target.name]: event.target.value,
+      }));
+    }
   };
-  const handleAddPlayer = () => {
-    setArticles(articlesType);
+  const handleAddPlayer = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}/api/players`,
+        articles
+      );
+
+      if (response) {
+        console.info(response);
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
   return (
     <div>
-      <h1>Administration d'un joueur</h1>
-      <form>
-        Ajout d'un joueur
+      <h1>Ajout d'un joueur</h1>
+      <form onSubmit={handleAddPlayer}>
+        <label>
+          TeamId
+          <input
+            type="number"
+            name="team_id"
+            required
+            value={articles.team_id}
+            onChange={handleArticles}
+          />
+        </label>
         <label>
           Lastname
           <input
@@ -86,9 +117,7 @@ function AdminArticles() {
             onChange={handleArticles}
           />
         </label>
-        <button type="button" onClick={handleAddPlayer}>
-          Ajouter
-        </button>
+        <button type="submit">Ajouter</button>
       </form>
     </div>
   );

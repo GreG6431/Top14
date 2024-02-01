@@ -9,6 +9,7 @@ import Oneplayer from "./pages/Oneplayer";
 import Administration from "./pages/Admin/Administration";
 import AdminArticles from "./pages/Admin/AdminArticles";
 import Dashboard from "./pages/Admin/Dashboard";
+import Contact from "./pages/Contact/Contact";
 
 import App from "./App";
 
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Dashboard />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
       },
     ],
   },

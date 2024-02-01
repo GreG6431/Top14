@@ -31,6 +31,7 @@ const playersControllers = require("./controllers/playersControllers");
 // // Route to get a list of items
 router.get("/team", teamControllers.getTeams);
 router.get("/players", playersControllers.getPlayers);
+router.post("/players", playersControllers.addPlayers);
 
 // // Route to get a specific item by ID
 router.get("/team/:id", teamControllers.getTeamById);

@@ -30,7 +30,37 @@ const getPlayerById = (req, res) => {
     });
 };
 
+const addPlayers = (req, res) => {
+  // Extract the item data from the request body
+
+  database
+    .query(
+      `insert into players(lastname, firstname, birthday, country, city, job, team_id ) values (?, ?, ?, ?, ?, ?, ?)`,
+      [
+        req.body.lastname,
+        req.body.firstname,
+        req.body.birthday,
+        req.body.country,
+        req.body.city,
+        req.body.job,
+        req.body.team_id,
+      ]
+    )
+    .then((result) => {
+      if (result) {
+        res.status(201).json({ result });
+      } else {
+        res.sendStatus(404);
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
 module.exports = {
   getPlayers,
   getPlayerById,
+  addPlayers,
 };
