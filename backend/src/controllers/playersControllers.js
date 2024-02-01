@@ -30,6 +30,16 @@ const getPlayerById = (req, res) => {
     });
 };
 
+const deletePlayers = (req, res) => {
+  database
+    .query("delete from players where id = ?", [req.params.id])
+    .then(res.status(204))
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
 const addPlayers = (req, res) => {
   // Extract the item data from the request body
 
@@ -63,4 +73,5 @@ module.exports = {
   getPlayers,
   getPlayerById,
   addPlayers,
+  deletePlayers,
 };

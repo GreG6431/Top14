@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import connexion from "../../services/connexion";
 import "./AdminArticles.css";
 
 const articlesType = {
@@ -27,17 +27,16 @@ function AdminArticles() {
       }));
     }
   };
+
   const handleAddPlayer = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        `${import.meta.env.VITE_BACKEND_URL}/api/players`,
-        articles
-      );
+      const response = await connexion.post(`/players`, articles);
 
       if (response) {
         console.info(response);
+        window.location.reload();
       }
     } catch (error) {
       console.error(error);

@@ -32,7 +32,7 @@ const playersControllers = require("./controllers/playersControllers");
 router.get("/team", teamControllers.getTeams);
 router.get("/players", playersControllers.getPlayers);
 router.post("/players", playersControllers.addPlayers);
-
+router.delete("/players/:id", playersControllers.deletePlayers);
 // // Route to get a specific item by ID
 router.get("/team/:id", teamControllers.getTeamById);
 router.get("/players/:id", playersControllers.getPlayerById);

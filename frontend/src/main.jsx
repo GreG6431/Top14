@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import axios from "axios";
+import connexion from "./services/connexion";
 
 import Team from "./components/Team";
 import Oneplayer from "./pages/Oneplayer";
@@ -22,8 +22,8 @@ const router = createBrowserRouter([
         path: "/",
         element: <Team />,
         loader: async () => {
-          return axios
-            .get(`${import.meta.env.VITE_BACKEND_URL}/api/team`)
+          return connexion
+            .get(`/team`)
             .then((res) => res.data)
             .catch((err) => console.error(err));
         },
@@ -32,11 +32,15 @@ const router = createBrowserRouter([
         path: "/team/:id",
         element: <Oneplayer />,
         loader: ({ params }) => {
-          return axios
-            .get(`${import.meta.env.VITE_BACKEND_URL}/api/team/${params.id}`)
+          return connexion
+            .get(`/team/${params.id}`)
             .then((response) => response.data)
             .catch((err) => console.error(err));
         },
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },
@@ -51,10 +55,6 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Dashboard />,
-      },
-      {
-        path: "contact",
-        element: <Contact />,
       },
     ],
   },
