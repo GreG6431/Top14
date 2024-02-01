@@ -18,6 +18,9 @@ function AdminArticles() {
       [event.target.name]: event.target.value,
     }));
   };
+  const handleAddPlayer = () => {
+    setArticles(articlesType);
+  };
   return (
     <div>
       <h1>Administration d'un joueur</h1>
@@ -83,6 +86,9 @@ function AdminArticles() {
             onChange={handleArticles}
           />
         </label>
+        <button type="button" onClick={handleAddPlayer}>
+          Ajouter
+        </button>
       </form>
     </div>
   );

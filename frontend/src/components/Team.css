@@ -20,7 +20,12 @@
   margin: 10px;
   padding: 10px;
   max-width: 300px;
-  height: 300px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -40,4 +45,8 @@ p {
 .custom-link {
   color: black;
   text-decoration: none;
+}
+
+.team-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
