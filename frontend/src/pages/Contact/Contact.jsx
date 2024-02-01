@@ -62,7 +62,7 @@ function Contact() {
   return (
     <div>
       <div className="contactCard">
-        <h1>Laissez moi un message !</h1>
+        <h1>Laissez votre message !</h1>
         <div className="containForm">
           <form onSubmit={handleSubmit} className="contactForm">
             <div>
