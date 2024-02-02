@@ -14,14 +14,18 @@ function Oneplayer() {
     }
   };
   return (
-    <div>
-      <h1>Nom: {Team.lastname}</h1>
-      <h1>Prénom: {Team.firstname}</h1>
-      <h1>Date de naissance: {Team.birthday}</h1>
-      <h1>Pays: {Team.country}</h1>
-      <h1>Ville: {Team.city}</h1>
-      <h1>Poste: {Team.job}</h1>
-      <button type="button" onClick={() => deletePlayers(Team.id)}>
+    <div className="player-card">
+      <h1 className="player-info">Nom: {Team.lastname}</h1>
+      <h1 className="player-info">Prénom: {Team.firstname}</h1>
+      <h1 className="player-info">Date de naissance: {Team.birthday}</h1>
+      <h1 className="player-info">Pays: {Team.country}</h1>
+      <h1 className="player-info">Ville: {Team.city}</h1>
+      <h1 className="player-info">Poste: {Team.job}</h1>
+      <button
+        className="delete-button"
+        type="button"
+        onClick={() => deletePlayers(Team.id)}
+      >
         Supprimer
       </button>
     </div>

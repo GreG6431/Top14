@@ -13,3 +13,21 @@
   width: 50%;
   margin: auto;
 }
+.player-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button-container {
+  margin-top: 20px;
+}
+
+.delete-button {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
