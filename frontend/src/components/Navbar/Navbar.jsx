@@ -15,6 +15,7 @@ function Navbar() {
         <Link to="/">Accueil</Link>
         <Link to="/LogIn">LogIn</Link>
         <Link to="/Contact">Contact</Link>
+        <Link to="/Administration/Articles">Ajout d'un joueur</Link>
       </div>
     </nav>
   );

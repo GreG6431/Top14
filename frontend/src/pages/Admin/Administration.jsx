@@ -4,11 +4,9 @@ import { Outlet, Link } from "react-router-dom";
 function Administration() {
   return (
     <div>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/administration">Dashboard</Link>
-        <Link to="/administration/articles">Articles</Link>
-      </nav>
+      <div className="menus">
+        <Link to="/">Accueil</Link>
+      </div>
       <Outlet />
     </div>
   );
