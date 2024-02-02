@@ -13,6 +13,7 @@ function Navbar() {
       </div>
       <div className="menus">
         <Link to="/">Accueil</Link>
+        <Link to="/LogIn">LogIn</Link>
         <Link to="/Contact">Contact</Link>
       </div>
     </nav>
