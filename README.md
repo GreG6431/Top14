@@ -1,18 +1,21 @@
-## Concept
+## Projet Top 14 Rugby
 
-This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
-It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying a pedagogical tool.
+Ce projet a été créé dans le cadre d'un exercice de cours pour afficher les équipes et les joueurs du championnat de rugby Top 14.
 
-## Setup & Use
+## Fonctionnalités
 
-### Windows users
+- Affichage de la liste des équipes du Top 14.
+- Affichage des joueurs par équipe.
+- Possibilité d'ajouter de nouveaux joueurs.
+- Possibilité de supprimer des joueurs existants.
 
-Be sure to run these commands in a git terminal to avoid [issues with newline formats](https://en.wikipedia.org/wiki/Newline#Issues_with_different_newline_formats):
+## Technologies utilisées
 
-```
-git config --global core.eol lf
-git config --global core.autocrlf false
-```
+- Frontend: HTML, CSS, JavaScript
+- Backend: Node.js
+- Base de données: MySQL
+- EmailJS: Pour envoyer des emails (si applicable)
+- Axios: Pour effectuer des requêtes HTTP
 
 ### Project Initialization
 
@@ -29,8 +32,6 @@ git config --global core.autocrlf false
 - `dev-front` : Starts the React frontend server
 - `dev-back` : Starts the Express backend server
 - `lint` : Runs validation tools (will be executed on every _commit_, and refuse unclean code)
-
-## FAQ
 
 ### Tools
 
