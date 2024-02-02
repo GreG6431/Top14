@@ -13,6 +13,9 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.text-card {
+  font-size: 12px;
+}
 
 .team-card {
   border: 2px solid #ccc;
@@ -23,20 +26,24 @@
   height: 280px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-around;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-  max-width: 100%;
-  height: auto;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: -10px;
 }
 
-.team-info {
-  margin-top: 10px;
+h4 {
+  height: 40px;
+  width: 170px;
+  text-align: center;
+  margin: 0 0 20px 0;
 }
-
 h1,
 h2,
 p {

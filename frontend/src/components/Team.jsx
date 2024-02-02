@@ -17,10 +17,10 @@ function Team() {
             <div className="team-card">
               <img className="logo" src={team.logo} alt="logo" />
               <div className="team-info">
-                <h2>{team.name}</h2>
-                <p>Ville: {team.city}</p>
-                <p>Stade: {team.stadium}</p>
-                <p>Création: {team.since}</p>
+                <h4>{team.name}</h4>
+                <p className="text-card">Ville: {team.city}</p>
+                <p className="text-card">Stade: {team.stadium}</p>
+                <p className="text-card">Création: {team.since}</p>
               </div>
             </div>
           </Link>
